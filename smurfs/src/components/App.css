@@ -1,28 +1,86 @@
-.App {
+.App, html {
   text-align: center;
+  background: rgb(70, 159, 205);
+  width: 100%;
+  margin: 0;
+  height: -webkit-fill-available;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+input {
+  width: 180px;
+  height: 20px;
+  margin: 5px 5px 20px 5px;
+  outline: none;
+  padding: 5px;
+
+}
+
+.add-btn {
+  background: white;
+  color: #1e4769;
+  font-size: 18px;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px
+}
+
+.add-btn:hover {
+  background: rgb(73, 133, 217);
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.delete-btn {
+  background: rgb(154, 42, 46);
+  border-radius: 4px
 }
 
-.App-intro {
-  font-size: large;
+.close-btn:hover {
+  background: rgb(154, 42, 46);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button {
+  width: 80px;
+  height: 25px;
+  margin: 5px;
+  border: 0px solid transparent;
+  outline: none;
+  background: rgb(48, 98, 226);
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(70, 159, 205);
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  text-align: left;
+  margin-left: 8px;
+  margin-top: -20px;
+  height: 8px;
+}
+
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: rgb(70, 159, 205);
+  margin-top: 10px;
 }
