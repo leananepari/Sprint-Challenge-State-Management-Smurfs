@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { getData, setForm, deleteSmurf } from '../actions';
+import { getData, setForm, deleteSmurf, editSmurf } from '../actions';
 import "./App.css";
 import Loader from 'react-loader-spinner';
 import Form from './Form';
 import SmurfList from './SmurfsList';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     this.props.getData();
@@ -24,7 +21,7 @@ class App extends Component {
           <Form getData={this.props.getData} setForm={this.props.setForm}/>
         ) : null}
         {this.props.loading ? ( <Loader type="Puff" color="#438ef1" />) : null}
-        <SmurfList smurfs={this.props.smurfs} deleteSmurf={this.props.deleteSmurf}/>
+        <SmurfList smurfs={this.props.smurfs} deleteSmurf={this.props.deleteSmurf} editSmurf={this.props.editSmurf}/>
       </div>
     );
   }
@@ -40,5 +37,5 @@ const mapStateToProps = state => {
 };
 export default connect(
   mapStateToProps,
-  { getData, setForm, deleteSmurf }
+  { getData, setForm, deleteSmurf, editSmurf }
 )(App);

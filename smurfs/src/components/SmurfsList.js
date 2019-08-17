@@ -6,7 +6,7 @@ function SmurfList(props) {
   return (
     <div className="grid-view">
       {props.smurfs.map(item => {
-        return <SmurfItem smurf={item} key={item.id} deleteSmurf={props.deleteSmurf}/>
+        return <SmurfItem smurf={item} key={item.id} deleteSmurf={props.deleteSmurf} editSmurf={props.editSmurf}/>
       })}
     </div>
   )

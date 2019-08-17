@@ -1,12 +1,5 @@
 const initialState = {
-  smurfs: [
-    {
-      name: "Brainey",
-      age: 200,
-      height: "5cm",
-      id: 0
-    }
-  ],
+  smurfs: [],
   loading: false,
   error: '',
   form: false
@@ -44,6 +37,19 @@ export const reducer = (state = initialState, action) => {
         error: ''
       };
     case 'DELETE_A_SMURF_FAILURE': 
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
+      };
+    case 'EDIT_A_SMURF_SUCCESS': 
+      return {
+        ...state,
+        smurfs: action.payload,
+        loading: false,
+        error: ''
+      };
+    case 'EDIT_A_SMURF_FAILURE': 
       return {
         ...state,
         loading: false,

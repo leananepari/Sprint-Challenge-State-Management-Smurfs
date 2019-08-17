@@ -4,17 +4,15 @@ import axios from 'axios';
 import * as Yup from 'yup';
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   componentDidUpdate(prevProps, prevState) {
     if (this.props.status !== prevProps.status && this.props.status) {
       this.props.getData();
     }
   }
-
+  
   render() {
+    console.log('FORM', this.props)
   return (
     <div>
     <div className="form">
